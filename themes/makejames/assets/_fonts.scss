@@ -1,0 +1,28 @@
+@font-face {
+  font-family: 'Alata';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+       url('fonts/alata/Alata-Regular.woff2') format('woff2'),
+       url('fonts/alata/Alata-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Bungee';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local(''),
+       url('fonts/bungee/Bungee-Regular.woff2') format('woff2'),
+       url('fonts/Bungee/Bungee-Regular.woff') format('woff');
+}
+
+body {
+  font-family: 'Alata', sans-serif;
+  h1 {
+    font-family: 'Bungee', sans-serif;
+  }
+  .brand {
+    font-family: 'Bungee', sans-serif;
+  }
+}

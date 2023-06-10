@@ -1,0 +1,40 @@
+{{- $page := .Page }}
+  <head>
+    <meta charset="utf-8">
+    <title>{{ block "title" . }}{{ with .Params.Title }}{{ . }} | {{ end }}{{ .Site.Title }}{{ end }}</title>
+    <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#FFFFFF">
+    <meta name="color-scheme" content="light dark">
+    <link rel="preload" href="{{ "fonts/alata/Alata-Regular.woff" | relURL }}" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="{{ "fonts/bungee/Bungee-Regular.woff" | relURL }}" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="{{ "fonts/alata/Alata-Regular.woff2" | relURL }}" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="{{ "fonts/bungee/Bungee-Regular.woff2" | relURL }}" as="font" type="font/woff2" crossorigin="anonymous">
+    {{- hugo.Generator }}
+
+{{/* NOTE: For Production make sure you add `HUGO_ENV="production"` before your build command */}}
+  {{- if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production")  }}
+    <meta name="robots" content="index, follow">
+  {{- else }}
+    <meta name="robots" content="noindex, nofollow">
+  {{- end }}
+    <link rel="icon" href="{{ "favicon.png" | relURL }}" type="image/x-icon">
+
+  {{- $styles := resources.Get "theme.scss" | resources.ExecuteAsTemplate "theme.scss" . | resources.ToCSS | resources.Minify }}
+  {{- $secureStyles := $styles | resources.Fingerprint "sha512" }}
+  {{- with $secureStyles }}
+    <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+  {{- end }}
+
+  {{- partial "opengraph" .}}
+
+  {{- template "_internal/google_analytics.html" . }}
+
+  {{- if .OutputFormats.Get "RSS" }}
+    {{- with .OutputFormats.Get "RSS" }}
+    <link href="{{ .RelPermalink }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />
+    <link href="{{ .RelPermalink }}" rel="feed" type="application/rss+xml" title="{{ $.Site.Title }}" />
+    {{- end }}
+  {{- end }}
+  </head>
+
