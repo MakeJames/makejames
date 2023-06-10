@@ -1,15 +1,35 @@
   <footer>
-      <svg viewBox="0 0 1440 300" fill="none" xmlns="http://www.w3.org/2000/svg" class="footer-background">
-        <path d="M0 0L433.304 107.009L673.54 166.338L706.731 174.535L1120.43 276.703L1439.5 355.5H1006H0V298V240.5V95V0Z" fill="#29525B"/>
-        <path d="M1439.5 355.5V257V82V57L1396.28 86.7585L1189.85 228.905L1120.43 276.703L1439.5 355.5Z" fill="#F2931E"/>
-        <path d="M1120.43 276.703L1189.85 228.905L706.731 174.535L1120.43 276.703Z" fill="#9CC5CD"/>
-        <path d="M706.731 174.535L1189.85 228.905L1396.28 86.7585L673.54 166.338L706.731 174.535Z" fill="#C35E46"/>
-      </svg>
+    <svg width="1440" height="368" viewBox="0 0 1440 368" fill="none" xmlns="http://www.w3.org/2000/svg" class="footer-background">
+      <path d="M1439.5 355.5V257V82V57L1396.28 86.7585L1189.85 228.905L1120.43 276.703L1439.5 355.5Z" fill="#F2931E"/>
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M433.304 107.009L0 0V95V240.5V298V1057H1439.5L1120.43 276.703L1008 248.936L706.731 174.535L673.54 166.338L433.304 107.009Z" fill="#29525B"/>
+      <path d="M1439.5 1057V355.5L1120.43 276.703L1439.5 1057Z" fill="#29525B"/>
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M1008 248.936L1080.66 216.616L706.731 174.535L1008 248.936Z" fill="#9CC5CD"/>
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M1080.66 216.616L706.731 174.535L673.54 166.338L1364.81 90.2243L1080.66 216.616Z" fill="#C35E46"/>
+      <path d="M1120.43 276.703L1189.85 228.905L1080.66 216.616L1008 248.936L1120.43 276.703Z" fill="#F2931E"/>
+      <path d="M1189.85 228.905L1396.28 86.7585L1364.81 90.2243L1080.66 216.616L1189.85 228.905Z" fill="#F2931E"/>
+      <path d="M1396.28 86.7585L1439.5 57L1364.81 90.2243L1396.28 86.7585Z" fill="#F2931E"/>
+    </svg>
+
       <div class="footer-container grid">
-        <div class="footer-nav">
+        {{- with .Site }}
+        <div class="footer-nav flex">
+          {{- range .Sections }}
+          <div class="nav-section">
+            <p><a href="{{ .RelPermalink }}">{{ .Title }}</a></p>
+            <div class="nav-items flex">
+              <div class="nav-bar"></div>
+              <ul class="flex">
+              {{- range .Pages }}
+                <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+              {{- end }}
+              </ul>
+            </div>
+          </div>
+          {{- end }}
         </div>
-      </div>
-      <div class="footer-brand">
-        {{- partial "brand.html" . }}
+        {{- end }}
+        <div class="footer-brand">
+          {{- partial "brand.html" . }}
+        </div>
       </div>
   </footer>
