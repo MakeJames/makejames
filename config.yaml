@@ -1,0 +1,8 @@
+baseURL: 'http://example.org/'
+languageCode: 'en-gb'
+title: 'Make James'
+theme: 'makejames'
+
+params:
+  sitemap:
+    - resume.md
