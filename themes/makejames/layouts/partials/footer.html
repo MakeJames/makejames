@@ -8,7 +8,11 @@
       <div class="footer-container grid">
         {{- with .Site }}
         <div class="footer-nav flex">
-          {{- range .Sections }}
+          {{- $navItems := .Sections }}
+          {{- range $value := .Param "sitemap" }}
+          {{- $navItems = $navItems | append (site.GetPage $value) }}
+          {{- end }}
+          {{- range sort $navItems "Weight" "asc" }}
           <div class="nav-section">
             <p><a href="{{ .RelPermalink }}">{{ .Title }}</a></p>
             <div class="nav-items flex">
