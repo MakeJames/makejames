@@ -1,16 +1,32 @@
 body {
   min-height: 100vh;
-  display: grid;
-  background: #F9F8F8;
-  margin: 0px;
+  background: $background;
+  margin: 0;
+  grid-template-rows: [nav] 10vh [main] auto [footer] auto;
+
+  .main {
+    grid-area: main;
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 80vw;
+    color: $dark;
+    .brand {
+      width: 70vw;
+      height: auto;
+      fill: $dark;
+    }
+  }
+
+  nav {
+    grid-area: nav;
+  }
 }
 
 footer {
   margin-top: auto;
-  display: grid;
+  grid-area: footer;
 
   .footer-background {
-    display: block;
     width: 100vw;
     height: auto;
     z-index: -1;
@@ -27,31 +43,27 @@ footer {
   .footer-nav {
     grid-column: 2;
     grid-row: 2;
-    height: 70%;
+    height: 60%;
     max-width: 100%;
     color: #F9F8F8;
     align-items: flex-start;
     align-content: flex-start;
     flex-flow: column wrap;
-    gap: 10px;
+    gap: 30px;
     color: #f9f8f880;
 
     .nav-section {
       min-width: 7vw;
       align-self: flex-start;
       p {
-        margin: 0;
-        font-size: .95em;
+        font-size: $font-size-16;
       }
       ul {
-        font-size: .85em;
+        font-size: $font-size-12;
         flex-direction: column;
         margin: 0;
         padding: 0;
         list-style-type: none;
-      }
-      a {
-        text-decoration: none;
       }
       a:visited {
         color: #f9f8f880;
@@ -76,7 +88,6 @@ footer {
     grid-area: main;
     grid-row: 2;
     svg {
-      display: block;
       fill: #F0F8EA;
       width: 15vw;
     }

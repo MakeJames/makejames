@@ -1,0 +1,39 @@
+
+$font-size-base: 16px !default;
+$font-size-12: 0.8rem !default;
+$font-size-14: 1.175rem !default;
+$font-size-16: 1.325rem !default;
+$font-size-18: 1.675rem !default;
+$font-size-22: 2.5rem !default;
+$font-size-32: 3.5rem !default;
+
+
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-500: #adb5bd;
+
+$background: #f9f8f8;
+$dark-accent: #c35e46;
+$light-accent: #9cc5cd;
+$dark-shade: #29525b;
+$light-shade: #f2931e;
+
+$dark: #2c2c2c;
+$light: #fbfbfb;
+
+h1 {
+  font-size: $font-size-32;
+}
+
+p {
+  margin: 0;
+  font-size: $font-size-14;
+}
+
+a {
+  text-decoration: none;
+}
+
+svg {
+  display: block;
+}
