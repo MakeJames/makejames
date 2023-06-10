@@ -7,13 +7,36 @@ body {
 
 footer {
   margin-top: auto;
+  display: grid;
 
-  .background {
+  .footer-background {
+    display: block;
+    width: 100vw;
+    z-index: -1;
+    grid-area: main;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr 5fr 4fr;
+    grid-template-rows: 11fr 9fr;
+    grid-area: main;
+  }
+
+  .footer-nav {
+    grid-column: 2;
+    grid-row: 2;
+    color: #F9F8F8;
+  }
+
+  .footer-brand {
+    justify-self: end;
+    align-self: end;
+    grid-area: main;
     svg {
       display: block;
-      width: 100vw;
-      height: auto;
+      fill: #F9F8F8;
+      width: 15vw;
     }
-    z-index: -1;
   }
+
 }
