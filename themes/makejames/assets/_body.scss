@@ -1,7 +1,19 @@
 body {
-  .footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+  min-height: 100vh;
+  display: grid;
+  background: #F9F8F8;
+  margin: 0px;
+}
+
+footer {
+  margin-top: auto;
+
+  .background {
+    svg {
+      display: block;
+      width: 100vw;
+      height: auto;
+    }
+    z-index: -1;
   }
 }
