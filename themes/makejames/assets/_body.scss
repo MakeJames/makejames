@@ -12,7 +12,7 @@ body {
     color: $dark;
     .brand {
       margin-top: 10vh;
-      width: 70vw;
+      width: 60vw;
       height: auto;
       fill: $dark;
     }
@@ -29,7 +29,7 @@ body {
     .brand {
       align-self: flex-start;
       height: auto;
-      width: 350px;
+      width: 250px;
       overflow: visible;
     }
     ul {
@@ -79,8 +79,9 @@ footer {
   }
 
   .footer-container {
-    grid-template-columns: 1fr 5fr 2fr 2fr;
-    grid-template-rows: 5fr 5fr;
+    display: grid;
+    grid-template-columns: 10vw auto 20vw;
+    grid-template-rows: 12vw auto;
     grid-area: main;
   }
 
@@ -131,10 +132,50 @@ footer {
   .footer-brand {
     grid-area: main;
     grid-row: 2;
+    grid-column: 3;
     svg {
       fill: #F0F8EA;
-      width: 15vw;
+      width: 180px;
     }
   }
 
+}
+
+@media (max-width: 890px) {
+  footer {
+    .footer-container {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-content: flex-end;
+      margin: 0 auto;
+
+      .footer-brand {
+        margin-top: 13vw;
+        order: -1;
+        svg {
+          width: 140px;
+        }
+      }
+      .footer-nav {
+        max-width: 100%;
+        align-items: center;
+        align-content: center;
+        flex-flow: column nowrap;
+        gap: 0px
+      }
+      .nav-section {
+        margin: 0 auto;
+        p {
+          text-align: center;
+        }
+      }
+      .nav-items {
+        flex-direction: column;
+      }
+      li {
+        margin: 0 auto;
+      }
+    }
+  }
 }
