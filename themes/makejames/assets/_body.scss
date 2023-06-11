@@ -44,6 +44,9 @@ body {
       color: $dark;
       font-family: 'Bungee', sans-serif;
     }
+    a:link {
+      color: $dark
+    }
     a:visited {
       color: $dark;
     }
@@ -110,6 +113,9 @@ footer {
         margin: 0;
         padding: 0;
         list-style-type: none;
+      }
+      a:link {
+        color: $light
       }
       a:visited {
         color: #f9f8f880;
