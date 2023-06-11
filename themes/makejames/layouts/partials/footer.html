@@ -17,7 +17,11 @@
             <p><a href="{{ .RelPermalink }}">{{ .Title }}</a></p>
             <div class="nav-items flex">
               <div class="nav-bar"></div>
+              {{- if gt .Pages.Len 5 }}
+              <ul class="flex nav-columns">
+              {{- else }}
               <ul class="flex">
+              {{- end }}
               {{- range .Pages }}
                 <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
               {{- end }}

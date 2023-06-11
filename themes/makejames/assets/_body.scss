@@ -99,6 +99,7 @@ footer {
     align-content: flex-start;
     flex-flow: column wrap;
     column-gap: 40px;
+    row-gap: 10px;
     color: #f9f8f880;
 
     .nav-section {
@@ -109,10 +110,15 @@ footer {
       }
       ul {
         font-size: $font-size-12;
-        flex-direction: column;
+        flex-flow: column wrap;
+        column-gap: 10px;
         margin: 0;
         padding: 0;
         list-style-type: none;
+      }
+      .nav-columns {
+        min-height: 80px;
+        max-height: 8vh;
       }
       a:link {
         color: $light
@@ -175,6 +181,9 @@ footer {
         margin: 0 auto;
         p {
           text-align: center;
+        }
+        ul {
+          flex-wrap: nowrap;
         }
       }
       .nav-items {
