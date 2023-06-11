@@ -1,14 +1,16 @@
             {{- with .Site.Title }}
             <div class="brand">
-              <svg aria-labelledby="page-title" viewBox="0 0 100 30">
-                <title>{{ . }}</title>
-                {{- $indent := 0 }}
-                <text x="0" y="0.1em">
-                  {{- range (split . " ") }}
-                  <tspan dy=".73em" x="{{ $indent }}em">{{ . }}</tspan>
-                  {{- $indent = add $indent .505}}
-                  {{- end }}
-                </text>
-              </svg>
+              <a href="{{ site.BaseURL }}">
+                <svg aria-labelledby="page-title" viewBox="0 0 100 30">
+                  <title>{{ . }}</title>
+                  {{- $indent := 0 }}
+                  <text x="0" y="0.1em">
+                    {{- range (split . " ") }}
+                    <tspan dy=".73em" x="{{ $indent }}em">{{ . }}</tspan>
+                    {{- $indent = add $indent .505}}
+                    {{- end }}
+                  </text>
+                </svg>
+              </a>
             </div>
             {{- end -}}

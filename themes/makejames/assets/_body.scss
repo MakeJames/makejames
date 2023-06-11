@@ -28,8 +28,9 @@ body {
     gap: 0px;
     .brand {
       align-self: flex-start;
-      height: 100%;
+      height: auto;
       width: 350px;
+      overflow: visible;
     }
     ul {
       flex-grow: 2;
@@ -40,13 +41,18 @@ body {
       padding: 0;
       color: $dark;
       font-family: 'Bungee', sans-serif;
-      font-size: $font-size-18;
     }
     a:visited {
       color: $dark;
     }
     a:hover {
       color: $gray-500;
+    }
+    .nav-item {
+      font-size: $font-size-22;
+    }
+    .home-nav-item {
+      font-size: $font-size-32;
     }
   }
   .home-nav {

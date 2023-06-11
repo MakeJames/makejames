@@ -16,7 +16,7 @@
       {{- partial "brand.html" . }}
       <ul class="flex">
       {{- range .Site.Sections }}
-        <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+        <li><a href="{{ .RelPermalink }}" class="nav-item">{{ .Title }}</a></li>
       {{- end }}
       </ul>
     </nav>
