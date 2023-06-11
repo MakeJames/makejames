@@ -1,0 +1,44 @@
+  <footer class="grid">
+    <svg viewBox="0 0 10 2.5" fill="none" xmlns="http://www.w3.org/2000/svg" class="footer-background">
+    <path d="M 0,0.5 L10,1.2 L0,500 L10,500 x" fill="#9CC5CD"/>
+    <path d="M 10,0.2 L0,2.5 L0,500 L10,500 x" fill="#C35E46"/>
+    <path d="M 10,0.1 L0,4.5 L0,500 L10,500 x" fill="#F2931E"/>
+    <path d="M 0,0 L10,2.4 L10,500 L0,500 x" fill="#29525B"/>
+   </svg>
+      <div class="footer-container">
+        {{- with .Site }}
+        <div class="footer-nav flex">
+          {{- $navItems := .Sections }}
+          {{- range $value := .Param "sitemap" }}
+          {{- $navItems = $navItems | append (site.GetPage $value) }}
+          {{- end }}
+          {{- range sort $navItems "Weight" "asc" }}
+          <div class="nav-section">
+            <p><a href="{{ .RelPermalink }}">{{ .Title }}</a></p>
+            <div class="nav-items flex">
+              <div class="nav-bar"></div>
+              {{- if gt .Pages.Len 5 }}
+              <ul class="flex nav-columns">
+              {{- else }}
+              <ul class="flex">
+              {{- end }}
+              {{- range .Pages }}
+                <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+              {{- end }}
+              </ul>
+            </div>
+          </div>
+          {{- end }}
+        </div>
+        {{- end }}
+        {{- if eq .Page .Site.Home }}
+        <div class="footer-brand footer-home">
+          {{- partial "brand.html" . }}
+        </div>
+        {{- else }}
+        <div class="footer-brand">
+          {{- partial "brand.html" . }}
+        </div>
+        {{- end }}
+      </div>
+  </footer>
