@@ -27,8 +27,14 @@
           {{- end }}
         </div>
         {{- end }}
+        {{- if eq .Page .Site.Home }}
+        <div class="footer-brand footer-home">
+          {{- partial "brand.html" . }}
+        </div>
+        {{- else }}
         <div class="footer-brand">
           {{- partial "brand.html" . }}
         </div>
+        {{- end }}
       </div>
   </footer>
