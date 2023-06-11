@@ -1,3 +1,13 @@
 {{- define "main" }}
     {{- partial "brand.html" . }}
 {{- end -}}
+
+{{- define "nav" }}
+    <nav class="flex">
+      <ul class="flex home-nav column">
+      {{- range .Site.Sections }}
+        <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+      {{- end }}
+      </ul>
+    </nav>
+{{- end -}}

@@ -11,6 +11,7 @@ body {
     width: 80vw;
     color: $dark;
     .brand {
+      margin-top: 10vh;
       width: 70vw;
       height: auto;
       fill: $dark;
@@ -19,6 +20,43 @@ body {
 
   nav {
     grid-area: nav;
+    width: 90vw;
+    max-width: 1400px;
+    margin: 0 auto;
+    height: 100%;
+    align-items: center;
+    gap: 0px;
+    .brand {
+      align-self: flex-start;
+      height: 100%;
+      width: 350px;
+    }
+    ul {
+      flex-grow: 2;
+      justify-content: flex-end;
+      gap: 10px;
+    }
+    a {
+      padding: 0;
+      color: $dark;
+      font-family: 'Bungee', sans-serif;
+      font-size: $font-size-18;
+    }
+    a:visited {
+      color: $dark;
+    }
+    a:hover {
+      color: $gray-500;
+    }
+  }
+  .home-nav {
+    margin-top: 20vh;
+    position: relative;
+    align-items: flex-end;
+    justify-content: flex-end;
+    a {
+      font-size: 3vw
+    }
   }
 }
 
