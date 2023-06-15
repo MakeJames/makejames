@@ -6,3 +6,4 @@ theme: 'makejames'
 params:
   sitemap:
     - resume.md
+  formUrl: https://formspree.io/f/myyaqrve
