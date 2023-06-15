@@ -2,7 +2,7 @@ body {
   min-height: 100vh;
   background: $background;
   margin: 0;
-  grid-template-rows: [nav] 10vh [main] auto [footer] auto;
+  grid-template-rows: [nav] 10vh [main] auto 10vh [footer] auto;
 
   .main {
     grid-area: main;
@@ -44,10 +44,10 @@ body {
       color: $dark;
       font-family: 'Bungee', sans-serif;
     }
-    a:link {
+    a:link, a:visited {
       color: $dark
     }
-    a:visited {
+    a:link:active, a:visited:active {
       color: $dark;
     }
     a:hover {
@@ -73,25 +73,27 @@ body {
 
 footer {
   grid-area: footer;
+  grid-template-columns: auto;
+  grid-template-rows: 30px auto;
+  margin-top: auto;
 
   .footer-background {
+    grid-area: 2 / 1;
     width: 100vw;
     height: auto;
     z-index: -1;
-    grid-area: main;
     overflow: visible;
   }
 
   .footer-container {
+    grid-area: 2 / 1;
     display: grid;
     grid-template-columns: 10vw auto 20vw;
-    grid-template-rows: 12vw auto;
-    grid-area: main;
+    grid-template-rows: 2vw 10vw auto;
   }
 
   .footer-nav {
-    grid-column: 2;
-    grid-row: 2;
+    grid-area: 3 / 2;
     height: 60%;
     max-width: 100%;
     color: #F9F8F8;
@@ -120,14 +122,14 @@ footer {
         min-height: 80px;
         max-height: 8vh;
       }
-      a:link {
+      a, a:link, a:visited {
         color: $light
-      }
-      a:visited {
-        color: #f9f8f880;
       }
       a:hover {
         color: #ffffff;
+      }
+      a:link:active, a:visited:active {
+        color: $dark;
       }
     }
 
@@ -143,9 +145,7 @@ footer {
   }
 
   .footer-brand {
-    grid-area: main;
-    grid-row: 2;
-    grid-column: 3;
+    grid-area: 3 / 3;
     svg {
       fill: #F0F8EA;
       width: 180px;

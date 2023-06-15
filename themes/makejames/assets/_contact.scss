@@ -1,0 +1,116 @@
+.button {
+  width: 150px;
+  grid-area: 1 / 1;
+  margin: 0 auto;
+  text-align: center;
+  font-size: $font-size-14;
+  a {
+    background: $gray-800;
+    color: $light;
+    border-radius: 50px;
+    box-shadow: 0 0 2px #2c2c2cf7;
+    flex-grow: 2;
+    padding: 0 .4em
+    &:link, &:visited {
+      color: $light;
+    }
+  }
+  a:hover {
+    background: $gray-500;
+    color: $dark;
+    transition: all 200ms;
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  height: auto;
+  background: #2c2c2cb7;
+  transition: opacity 500ms;
+  visibility: hidden;
+  z-index: 1;
+  opacity: 0;
+}
+
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.pop-up {
+  background: $light;
+  grid-template-columns: 10px 30px auto [close] 30px 10px;
+  grid-template-rows: 10px 30px [detail] auto [form] auto 10px;
+  width: 80vw;
+  min-width: 250px;
+  max-width: 500px;
+  border-radius: 10px;
+  box-shadow: 0 0 40px #2c2c2cf2;
+  height: auto;
+  min-height: 400px;
+  margin: 0 auto;
+  .close {
+    grid-area: 2 / close;
+    font-size: $font-size-22;
+  }
+  form {
+    grid-area: form / 3;
+    row-gap: 20px;
+    input[type=email], input[type=text], textarea {
+      width: 100%;
+      border: 0px;
+      background-color: $gray-200;
+      color: $dark;
+      font-size: $font-size-14;
+      font-family: 'Alata', sans-serif;
+    }
+    input[type=email] {
+      height: 1.5em;
+    }
+    textarea {
+      height: 10em;
+      resize: vertical;
+    }
+    button[type=submit] {
+      width: 20%;
+      min-width: 70px;
+      height: 1.75em;
+      border-radius: 50px;
+      border: 0px;
+      font-size: $font-size-14;
+      margin: 0 auto;
+      color: $light;
+      background-color: $dark;
+      box-shadow: 0 0 2px #2c2c2cf7;
+      &:hover {
+        color: $dark;
+        background-color: $gray-500;
+        transition: background-color .15s;
+      }
+    }
+    label {
+      display: none;
+    }
+  }
+  .detail {
+    grid-area: detail / 3;
+    text-align: center;
+    color: $dark;
+    h2 {
+      font-family: "Bungee";
+      font-size: $font-size-22;
+    }
+  }
+  a:link {
+    color: $dark;
+  }
+  a:visited {
+    color: $dark;
+  }
+
+}
