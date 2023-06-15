@@ -4,7 +4,7 @@
 
 - [x] Site structure defined
 - [x] Navigation and footer elements defined
-- [ ] Contact Form
+- [x] Contact Form
 - [ ] Pre-built inline incons
 - [ ] Info panel shortcodes
 - [ ] Footer social links
@@ -18,6 +18,7 @@
 
 ## Future Releases
 
+- Send emails from static site
 - Image styling
 - Video styling
 - Music Player
