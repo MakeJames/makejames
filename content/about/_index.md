@@ -5,18 +5,12 @@ weight: 1
 
 # About
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis enim ut tellus elementum sagittis.
+Hi, I'm James.
 
-## Commodo nulla facilisi nullam
+I am a musician, coder, and scrum master and I like to make things.
 
-vehicula ipsum a. Eros donec ac odio tempor orci dapibus ultrices in iaculis. Et ultrices neque ornare aenean euismod elementum. Sed id semper risus in hendrerit gravida rutrum quisque. Orci eu lobortis elementum nibh tellus molestie. Sagittis vitae et leo duis ut diam quam nulla porttitor.
+Through my career, I have had the privilege of working on diverse transformational projects across the public and third sectors. From leading the implementation of innovative solutions to driving data-driven decision-making, I have honed my skills and gained invaluable experiences that have shaped me both professionally and personally.
 
-Sit amet massa vitae tortor condimentum lacinia quis vel. Risus feugiat in ante metus dictum at tempor commodo ullamcorper. Est ultricies integer quis auctor elit sed vulputate mi sit. Quis eleifend quam adipiscing vitae proin sagittis. Sed ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Ullamcorper a lacus vestibulum sed. Pellentesque id nibh tortor id aliquet. Vel pharetra vel turpis nunc eget lorem dolor sed viverra. Vitae et leo duis ut diam. Malesuada fames ac turpis egestas maecenas. Aenean euismod elementum nisi quis.
+When not empowering teams to work more effectively together, you can find me tinkering with new technologies, exploring innovative solutions, or mentoring others. I aim to foster a culture of innovation, collaboration, and cross-sector partnerships. Together, we can drive positive change and create a more inclusive and accessible digital solutions.
 
-### Ipsum suspendisse ultrices gravida
-
-dictum fusce ut placerat orci nulla. In ante metus dictum at tempor. Fames ac turpis egestas sed tempus. Laoreet id donec ultrices tincidunt arcu. Gravida cum sociis natoque penatibus et magnis dis parturient. Pulvinar mattis nunc sed blandit libero volutpat. Id aliquet risus feugiat in ante metus dictum at tempor. Nibh cras pulvinar mattis nunc sed blandit. Pharetra convallis posuere morbi leo urna molestie at elementum eu. Pulvinar mattis nunc sed blandit libero volutpat. Fringilla est ullamcorper eget nulla. Lobortis elementum nibh tellus molestie nunc non blandit massa enim. In nisl nisi scelerisque eu. Ornare quam viverra orci sagittis eu volutpat odio facilisis mauris. Imperdiet massa tincidunt nunc pulvinar sapien et. Morbi quis commodo odio aenean. Eget gravida cum sociis natoque penatibus. Nunc mattis enim ut tellus elementum sagittis vitae. Vitae aliquet nec ullamcorper sit amet risus nullam.
-
-## Sodales neque sodales ut etiam
-
-Volutpat blandit aliquam etiam erat. Dui ut ornare lectus sit amet est placerat. Cursus vitae congue mauris rhoncus aenean vel elit scelerisque mauris. Nisi porta lorem mollis aliquam ut porttitor leo a diam. A lacus vestibulum sed arcu. Ac feugiat sed lectus vestibulum. Tortor dignissim convallis aenean et. Velit aliquet sagittis id consectetur purus ut faucibus pulvinar elementum. Elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at augue. Faucibus scelerisque eleifend donec pretium vulputate sapien. Dignissim enim sit amet venenatis urna cursus eget. Donec adipiscing tristique risus nec feugiat in fermentum posuere urna.
+Feel free to check out the rest of my website and discover more of my projects and journey towards better, more efficient, inclusive solutions for all.
