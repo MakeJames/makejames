@@ -15,8 +15,10 @@
     <nav class="flex">
       {{- partial "brand.html" . }}
       <ul class="flex">
-      {{- range .Site.Sections }}
+      {{- range site.Params.nav }}
+        {{- with site.GetPage . }}
         <li><a href="{{ .RelPermalink }}" class="nav-item">{{ .Title }}</a></li>
+        {{- end }}
       {{- end }}
       </ul>
     </nav>
