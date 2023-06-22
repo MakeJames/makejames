@@ -4,7 +4,7 @@ title: Letterpress Theme
 
 The [Letterpress Theme](https://letter-press.makejames.com) is an elegant simple [Hugo]() theme with a focus on type face and readability.
 
-This theme is maintained to support the [Exploding Greenhouse]({{< rel "exploding-greenhouse.md" >}}) Project.
+This theme is maintained to support the [Exploding Greenhouse]({{< ref "exploding-greenhouse.md" >}}) Project.
 
 <!--more-->
 
