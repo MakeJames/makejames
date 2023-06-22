@@ -16,6 +16,12 @@ body {
       height: auto;
       fill: $dark;
     }
+    a:link, a:visited, a:link:active, a:visited:active {
+      color: $dark-accent;
+    }
+    a:hover {
+      color: $gray-500;
+    }
   }
 
   nav {
