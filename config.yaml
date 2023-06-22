@@ -4,6 +4,10 @@ title: 'Make James'
 theme: 'makejames'
 
 params:
+  nav:
+    - about.md
+    - projects
   sitemap:
+    - about.md
     - resume.md
   formUrl: https://formspree.io/f/myyaqrve
