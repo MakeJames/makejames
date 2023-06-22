@@ -37,7 +37,7 @@ body {
   nav {
     grid-area: nav;
     width: 90vw;
-    max-width: 1400px;
+    max-width: 1900px;
     margin: 0 auto;
     height: 100%;
     align-items: center;
@@ -52,7 +52,7 @@ body {
     ul {
       flex-grow: 2;
       justify-content: flex-end;
-      gap: 10px;
+      gap: 1.5rem;
       list-style-type: none;
     }
     a {
