@@ -1,5 +1,5 @@
 body {
-  min-height: 100vh;
+  min-height: 20vh;
   background: $background;
   margin: 0;
   grid-template-rows: [nav] 10vh [main] auto 10vh [footer] auto;
@@ -7,11 +7,12 @@ body {
   .main {
     grid-area: main;
     margin: 0 auto;
-    max-width: 1200px;
+    max-width: 1800px;
     width: 80vw;
     color: $dark;
     .brand {
       margin-top: 10vh;
+      max-width: 1250px;
       width: 60vw;
       height: auto;
       fill: $dark;
@@ -72,7 +73,7 @@ body {
     align-items: flex-end;
     justify-content: flex-end;
     a {
-      font-size: 3vw
+      font-size: $font-size-32;
     }
   }
 }
