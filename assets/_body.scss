@@ -180,13 +180,14 @@ footer {
       margin: 0 auto;
 
       .footer-brand {
-        margin-top: 13vw;
-        order: -1;
+        margin-top: 8vw;
+        order: 5;
         svg {
           width: 140px;
         }
       }
       .footer-nav {
+        margin-top: 15vw;
         max-width: 100%;
         align-items: center;
         align-content: center;
