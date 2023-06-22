@@ -1,7 +1,6 @@
 baseURL: 'https://makejames.com/'
 languageCode: 'en-gb'
 title: 'Make James'
-theme: 'makejames'
 
 params:
   nav:
