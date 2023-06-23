@@ -4,6 +4,6 @@
   {{- range .Pages }}
   <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
   {{- .Summary }}
-  <a href="{{ .RelPermalink }}">Read more ...</a>
+  <p><a href="{{ .RelPermalink }}">Read more ...</a></p>
   {{- end }}
 {{- end -}}
