@@ -9,3 +9,5 @@ This theme is maintained to support the [Exploding Greenhouse]({{< ref "explodin
 <!--more-->
 
 This theme is based on the [hugo-book](https://github.com/alex-shpak/hugo-book) theme by alex-shpak.
+
+{{< section-nav >}}

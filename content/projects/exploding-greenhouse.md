@@ -9,3 +9,5 @@ The [Exploding Greenhouse](https://garden.makejames.com) is my [digital garden](
 ## Technology
 
 The site is built using [Hugo]() using the [Lighthouse Theme]({{< relref "letterpress-theme.md" >}}) that was forked from [hugo-book]()
+
+{{< section-nav >}}
