@@ -34,6 +34,34 @@ body {
     }
   }
 
+  .section-nav {
+    margin-top: 100px;
+    margin-bottom: 10px;
+    a:hover {
+      fill: $gray-500;
+      .arrow {
+        stroke: $gray-500;
+      }
+    }
+    svg {
+      overflow: visible;
+      white-space: nowrap;
+    }
+    .arrow {
+      stroke: $dark;
+    }
+    .previous {
+      justify-self: flex-start;
+      margin-right: auto;
+
+    }
+    .next {
+      display: block;
+      margin-left: auto;
+      justify-self: flex-end;
+    }
+  }
+
   nav {
     grid-area: nav;
     width: 90vw;
