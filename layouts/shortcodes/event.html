@@ -1,0 +1,19 @@
+{{- $title := "" }}
+{{- $organisation := "" }}
+{{- $to := now }}
+
+{{- if ne ( .Get "title" ) "" }}
+  {{- $title = ( .Get "title" ) }}
+{{- end }}
+
+{{- if ne ( .Get "organisation" ) "" }}
+  {{- $organisation = ( .Get "organisation" ) }}
+{{- end }}
+
+<div class="event">
+  <h2>{{ $title }}</h2>
+  {{- if ne $organisation "" }}
+  <div class="organisation">{{ $organisation }}</div>
+  {{- end }}
+  <div class="event-body">{{ .Inner }}</div>
+</div>
