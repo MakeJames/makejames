@@ -1,0 +1,53 @@
+.timeline {
+  margin: 0 auto;
+  grid-template-columns: [side-bar] 30px [circle] 40px [event] auto [last-column] 10px;
+  width: 60vw;
+  min-width: 360px;
+}
+
+.timeline::before {
+  position: relative;
+  left: 5px;
+  grid-column: 1;
+  grid-row: 1 / span 1000;
+  width: 10px;
+  height: auto;
+  background: $gray-500;
+  content: "";
+  border-radius: 10px;
+  display: block;
+  justify-self: end;
+  overflow: hidden;
+}
+
+.timeline::after {
+  grid-column: 3;
+  margin-top: 50px;
+  height: auto;
+  width: auto;
+  content: "";
+}
+
+.event {
+  grid-column: 3;
+}
+.event-title {
+  display: inline-block;
+  font-family: bungee,sans-serif;
+  margin-top: 50px !important;
+  margin-bottom: 0px !important;
+}
+.event-circle {
+  position: relative;
+  left: -17px;
+  align-self: end;
+  z-index: 5;
+  grid-column: 2;
+  width: 26px;
+  height: 26px;
+  border: 4px solid $dark-accent;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: #fff;
+  content: "";
+}
