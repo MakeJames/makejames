@@ -1,1 +1,30 @@
-<div class="timeline grid">{{ .Inner }}</div>
+{{- with $.Site.Data.resume }}
+  <div class="timeline grid">
+  {{- range sort . "start" "desc" }}
+    {{- if ne .hidden true }}
+    <div class="event">
+      <h3 class="event-title inline-block">{{ .title }}</h3>
+      {{- if ne .grade "" }}
+      <div class="grade">{{ .grade }}</div>
+      {{- end }}
+      <div class="event-sub-title block">
+      {{- if ne .organisation "" }}
+        <a href="{{ .organisation_url }}" class="inline">{{ .organisation }}</a>
+      {{- end }}
+      {{- if ne .start "" }}
+        {{- if ne .organisation "" }}
+        <div class="inline">|</div>
+        {{- end }}
+        {{- if eq .type "qualification" }}
+        <div class="inline">{{ dateFormat "Jan 2006" .end }}</div>
+        {{- else }}
+        <div class="inline">{{ dateFormat "Jan 2006" .start }}</div>
+        {{- end }}
+      {{- end }}
+      </div>
+      <div class="body">{{ .description | markdownify }}</div>
+    </div>
+    {{- end }}
+  {{- end }}
+  </div>
+{{- end }}
